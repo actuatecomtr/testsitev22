@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actuate | Technology</title>
+  <meta name="description" content="Technical architecture of Actuate's Edge Platform — three-layer edge integration, processing, and output.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><img src="assets/images/logo-dark.jpg" alt="Actuate"></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="technology.html" class="active">Technology</a>
+        <a href="applications.html">Applications</a>
+        <a href="rd-collaboration.html">R&D Collaboration</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+<section class="hero">
+  <div class="container hero-grid hero-generic">
+    <div>
+      <div class="eyebrow">Technology</div>
+      <h1>The Platform</h1>
+      <p class="lead">Actuate's Edge Platform is the operational layer between devices and downstream systems. It connects hardware from different manufacturers, processes data locally, and produces structured outputs — without requiring a single vendor ecosystem or continuous cloud connectivity.</p>
+      <p class="muted" style="color:var(--muted)">The architecture is built around three functional layers.</p>
+    </div>
+    <aside class="hero-panel">
+      <div class="eyebrow">Architecture</div>
+      <h3>Three-layer design</h3>
+      <p style="color:var(--muted);font-size:14px;margin:0">Universal integration → on-edge processing → structured output and selective distribution.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container feature-grid">
+    <article class="card card-accent">
+      <div class="eyebrow">Layer 1</div>
+      <h2>Universal sensor and device integration</h2>
+      <p>The first problem in any mixed-vendor environment is that devices do not share a common language. Industrial protocols, analog interfaces, mobility standards, and imaging systems all operate differently. The edge layer is designed to connect across all of them.</p>
+      <h3>Supported interfaces</h3>
+      <ul class="list-clean">
+        <li>Analog: 4–20mA, 0–10V</li>
+        <li>Industrial protocols: Modbus RTU/TCP, CAN bus, OPC-UA, BACnet</li>
+        <li>Mobility: OBD-II, V2X</li>
+        <li>Imaging: RGB, thermal, multispectral (including NDVI)</li>
+        <li>Custom and legacy interfaces on a project-specific basis</li>
+      </ul>
+      <p style="margin-top:12px">A single deployment can ingest data from a PLC, a third-party field sensor, an energy analyser, and an imaging system simultaneously — within the same architecture, without replacing or reconfiguring existing hardware.</p>
+      <p>In the DHL Supply Chain Turkey deployment, this allowed existing warehouse infrastructure to be connected without hardware replacement — a hard requirement under DHL's security policy.</p>
+    </article>
+
+    <article class="card card-accent-2">
+      <div class="eyebrow">Layer 2</div>
+      <h2>On-edge processing and AI</h2>
+      <p>Data is processed locally — on embedded hardware at the deployment site, not on a remote server.</p>
+      <h3>Local processing handles</h3>
+      <ul class="list-clean">
+        <li>Signal filtering and normalisation across mixed data types</li>
+        <li>Rule-based logic and threshold monitoring</li>
+        <li>Event and anomaly detection</li>
+        <li>Lightweight inference for constrained devices — including small-footprint models for low-power hardware that run classification and detection on-device without cloud dependency</li>
+        <li>Image-based event detection on Linux-class edge devices</li>
+      </ul>
+      <p style="margin-top:12px">The system runs across a wide compute spectrum — from bare-metal microcontrollers (ARM 32-bit, from 16KB, no OS) through Linux-based mini edge devices, MEC-class nodes, and midsize edge aggregation environments handling multi-source data for concurrent consumers.</p>
+      <p>Processing performance is determined by local compute capability, not network conditions. This matters in latency-sensitive environments and wherever data residency requirements prevent off-site processing.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-2">
+    <section class="panel">
+      <div class="eyebrow">Layer 3</div>
+      <h2>Structured output and selective distribution</h2>
+      <p>Raw data is rarely what downstream systems need. The output layer produces structured information rather than continuous streams:</p>
+      <ul class="list-clean">
+        <li>Alerts and event logs</li>
+        <li>Aggregated metrics and KPIs</li>
+        <li>Flagged records or selected frames</li>
+        <li>Decision-ready outputs for dashboards, APIs, or institutional systems</li>
+      </ul>
+      <p style="margin-top:12px">Outputs can be routed to public cloud, private infrastructure, on-premise systems, or multiple endpoints simultaneously. In multi-stakeholder deployments, different consumers receive only the outputs relevant to their role, from the same physical source.</p>
+    </section>
+    <section class="panel panel-muted">
+      <div class="eyebrow">Compute spectrum</div>
+      <p style="color:var(--muted);font-size:14px;margin-bottom:14px">The same platform logic runs across very different hardware classes depending on what the operational environment requires.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Level</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Bare-metal</td><td>ARM 32-bit from 16KB — no OS, direct hardware programming</td></tr>
+            <tr><td>Micro edge</td><td>Low-power embedded devices, minimal compute</td></tr>
+            <tr><td>Mini edge</td><td>Linux-based field devices</td></tr>
+            <tr><td>MEC</td><td>Mobile edge compute class nodes</td></tr>
+            <tr><td>MSEC</td><td>Midsize edge aggregation — multi-source, concurrent consumers</td></tr>
+            <tr><td>Heavy edge</td><td>High-capacity nodes, local AI at scale</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container panel">
+    <div class="eyebrow">TRL positioning</div>
+    <p>Core integration and processing functions have been validated in operational environments across multiple sectors, corresponding to TRL 7–8. Sector-specific implementations — including the DHL warehouse deployment and the SafeRoute-6G pilots — have reached TRL 8–9.</p>
+    <p>Actuate also participates in projects at TRL 4–6, where the objective is extending the platform into new communication environments or application domains. The active Horizon Europe agricultural project operates in this range for certain components.</p>
+  </div>
+</section>
+
+  </main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top-cta">
+      <h3>If your environment has devices that do not work together, we would be glad to hear about it.</h3>
+      <p><a class="inline-link" href="mailto:info@actuate.com.tr">info@actuate.com.tr</a> · <a class="inline-link" href="tel:+902167844502">+90 (216) 784 45 02</a></p>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-nav"><a href="index.html">Home</a><a href="technology.html">Technology</a><a href="applications.html">Applications</a><a href="rd-collaboration.html">R&D Collaboration</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+        <hr class="sep">
+        <div class="footer-legal"><a href="privacy-notice-kvkk.html">Privacy Notice (KVKK)</a><a href="privacy-policy.html">Privacy Policy</a><a href="cookie-policy.html">Cookie Policy</a><a href="gender-equality-plan.html">Gender Equality Plan</a><a href="ethics-and-responsible-innovation.html">Ethics and Responsible Innovation</a></div>
+      </div>
+      <div class="small">Marmara University Technology Development Zone (Technopark), Kadıköy, Istanbul<br>© <span data-year></span> Actuate</div>
+    </div>
+  </div>
+</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

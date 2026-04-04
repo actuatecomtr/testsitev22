@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actuate | Applications</title>
+  <meta name="description" content="Deployment contexts for Actuate's Edge Platform — logistics, mobility, agriculture, industrial, health.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><img src="assets/images/logo-dark.jpg" alt="Actuate"></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="technology.html">Technology</a>
+        <a href="applications.html" class="active">Applications</a>
+        <a href="rd-collaboration.html">R&D Collaboration</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+<section class="hero">
+  <div class="container hero-grid hero-generic">
+    <div>
+      <div class="eyebrow">Applications</div>
+      <h1>Applications</h1>
+      <p class="lead">The platform was not built for one sector. It was built for one class of problem: environments where devices from different manufacturers need to work together, data needs to be processed locally, and outputs need to serve more than one system or stakeholder.</p>
+      <p style="color:var(--muted);font-size:15px">What changes across deployments is the sensing context, the decision logic, and the output structure. The underlying architecture does not.</p>
+    </div>
+    <aside class="hero-panel">
+      <div class="eyebrow">One architecture</div>
+      <h3>Multiple deployment contexts.</h3>
+      <p style="color:var(--muted);font-size:14px;margin:0">The sensing environment changes. The platform logic remains stable.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container applications-grid">
+
+    <article class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/><line x1="12" y1="12" x2="12" y2="16"/></svg>
+      </div>
+      <h2>Logistics and Warehouse Operations</h2>
+      <p>Large logistics operations run equipment from multiple vendors across facilities of different sizes, layouts, and product types. Integrating them into a coherent operational picture typically requires hardware replacement or expensive vendor-specific middleware.</p>
+      <p>At DHL Supply Chain Turkey, the Edge Platform was deployed across multiple distribution centres to connect existing warehouse sensors, energy analysers, and imaging systems without replacing operational hardware. DHL's security requirements meant that externally dependent solutions were not viable. The system met those constraints by processing data locally and exposing only structured outputs to authorised systems.</p>
+      <p>Energy monitoring was integrated as a foundation for operational efficiency analysis, aligned with DHL's sustainability commitments under the European Green Deal framework.</p>
+    </article>
+
+    <article class="card app-emphasis-purple">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <h2>Mobility and Infrastructure</h2>
+      <p>Infrastructure and mobility systems present a specific challenge: multiple data sources, multiple protocols, multiple institutional actors, and no single operator with authority over the whole system.</p>
+      <p>In the Celtic-Next SafeRoute-6G project, Actuate holds technical leadership for edge computing across a 24-partner consortium spanning 10 countries. The work involves connecting OBD-II vehicle interfaces, V2X communication systems, and distributed weather and road condition sensors into a unified edge layer. Each source uses a different protocol and was not designed to interoperate with the others.</p>
+      <p>Processed outputs are made available to multiple institutional consumers simultaneously — road safety operators, research partners, and public agencies — without each requiring direct access to the underlying hardware. One physical deployment, multiple stakeholders, local processing, selective exposure.</p>
+      <p><a class="inline-link" href="https://www.celticnext.eu/project-saferoute-6g/" target="_blank" rel="noopener">SafeRoute-6G project page</a></p>
+    </article>
+
+    <article class="card app-emphasis">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12c0-1.85.5-3.58 1.38-5.06"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <h2>Agriculture</h2>
+      <p>Agricultural sensing has a fundamental connectivity problem: the environments where monitoring matters most are often those with the least reliable network coverage. A system that depends on cloud connectivity for its core functions is not a field system.</p>
+      <p>In an active Horizon Europe project, Actuate co-leads the work package responsible for digital early warning systems in agricultural sensing environments. The architecture is designed for conditions where internet connectivity is intermittent or absent. Sensor data is processed on-device. Alerts and decisions are generated locally. Synchronisation with remote systems occurs when a connection becomes available — not as a prerequisite for the system to function.</p>
+      <p>The deployment also involves lightweight on-device inference: small-footprint AI models that run classification and detection directly on field hardware, without cloud dependency.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <h2>Industrial and Manufacturing</h2>
+      <p>Production environments accumulate equipment from multiple vendors over years. The result is fragmented visibility: each system readable only to itself, maintenance data siloed by manufacturer, anomaly detection either manual or absent.</p>
+      <p>The edge layer connects existing industrial devices — PLCs, sensors, controllers, energy monitoring systems — into a common operational view without infrastructure replacement. Relevant deployments have included fastener production and machinery manufacturing environments, where mixed-vendor device integration and energy monitoring were the primary requirements.</p>
+    </article>
+
+    <article class="card" style="grid-column:1/-1">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <h2>Health-related Sensing</h2>
+      <p>Continuous monitoring environments share requirements that work against cloud-routed processing: low latency, data residency constraints, regulatory compliance, and the need for critical alerts to be generated without depending on external infrastructure.</p>
+      <p>Actuate has active R&D in health-related sensing, including neurological condition monitoring applications. Current work is at TRL 4–5. Processing and alert generation are designed to occur on-device within the care environment, without personal health data leaving the facility for first-level processing.</p>
+    </article>
+
+  </div>
+</section>
+
+  </main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top-cta">
+      <h3>If your environment has devices that do not work together, we would be glad to hear about it.</h3>
+      <p><a class="inline-link" href="mailto:info@actuate.com.tr">info@actuate.com.tr</a> · <a class="inline-link" href="tel:+902167844502">+90 (216) 784 45 02</a></p>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-nav"><a href="index.html">Home</a><a href="technology.html">Technology</a><a href="applications.html">Applications</a><a href="rd-collaboration.html">R&D Collaboration</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+        <hr class="sep">
+        <div class="footer-legal"><a href="privacy-notice-kvkk.html">Privacy Notice (KVKK)</a><a href="privacy-policy.html">Privacy Policy</a><a href="cookie-policy.html">Cookie Policy</a><a href="gender-equality-plan.html">Gender Equality Plan</a><a href="ethics-and-responsible-innovation.html">Ethics and Responsible Innovation</a></div>
+      </div>
+      <div class="small">Marmara University Technology Development Zone (Technopark), Kadıköy, Istanbul<br>© <span data-year></span> Actuate</div>
+    </div>
+  </div>
+</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
